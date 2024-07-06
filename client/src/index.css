@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-background: #dcdce6;
+  --darker-background: #d6d6d6;
+  --yellow: #ecd290;
+  --blue: #8b8ca6;
+  --green: #cbe0dc;
+}
+
+* > * {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #dcdce6;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Loader Spinner */
+
+.loader-parent {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid #312e81;
+  border-left-color: transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
